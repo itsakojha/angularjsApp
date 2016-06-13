@@ -1,0 +1,60 @@
+<h2>Table</h2>
+<div class="row">
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Add Table</h3></div>
+        <div class="panel-body">
+        	<form role="form" class="form" name="tableForm" novalidate="" ng-submit="tableForm()">
+        	<div class="form-group">
+        		<label for="{{table.name}}">Name</label>
+        		<input type="text" name="name" ng-model="table.name" id="{{table.name}}" class="form-control">
+        	</div>
+        	<div class="form-group">
+        		<label for="{{table.age}}">Age</label>
+        		<input type="text" name="age" ng-model="table.age" id="{{table.age}}" class="form-control">
+        	</div>
+        	<div class="form-group">
+        		<label for="{{table.money}}">Money</label>
+        		<input type="text" name="table.money" ng-model="table.money" id="{{table.money}}" class="form-control">
+        	</div>
+        	<div class="form-group">
+        		<label for="{{table.country}}">Country</label>
+        		<select name="{{table.country}}" class="form-control" ng-model="table.country">
+        			<option value="">Select Country</option>
+        		</select>
+        	</div>
+        	<div class="form-group">        		
+        		<button class="btn btn-primary">Submit</button>
+        	</div>	
+        	</form>
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Table Listing</h3></div>
+        <div class="panel-body">
+        	<table class="table table-bordered table-striped">
+        		<thead>
+        			<tr>
+        				<th>Name</th>
+        				<th>Age</th>
+        				<th>Money</th>
+        				<th>Country</th>
+        			</tr>
+        		</thead>
+        		<tbody>
+        			<tr ng-repeat="data in q">
+        				<td>{{data.name}}</td>
+        				<td>{{data.age}}</td>
+        				<td>{{data.money}}</td>
+        				<td>{{data.country}}</td>
+        			</tr>
+        		</tbody>
+        	</table>
+        </div>
+    </div>
+</div>
+</div>
